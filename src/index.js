@@ -9,6 +9,10 @@ function displayFilm(film){
        <p class = "card-text"> ${film.runtime}</p>
        <p class = "card-text">${film.showtime}</p>
        <p class = "card-text">${film.capacity}</p>
+       <h5 class="card-title">
+         Tickets Available:<span>${film.capacity-film.tickets_sold}</span>
+       </h5>
+       <a class= "btn btn-primary" id = 'buy'> Buy </a>
     </div>
  
     `
@@ -16,6 +20,7 @@ function displayFilm(film){
     // Adding elements to tHE DOM
 document.querySelector("#column-left").appendChild(card)
 }
+
 
 // fetching films
 
